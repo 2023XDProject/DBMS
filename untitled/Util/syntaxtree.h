@@ -3,7 +3,7 @@
  */
 #ifndef SYNTAXTREE_H
 #define SYNTAXTREE_H
-#include <Regex>
+#include <regex>
 #include <QString>
 #include "DataStructure.h"
 

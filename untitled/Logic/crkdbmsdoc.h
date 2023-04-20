@@ -23,7 +23,7 @@ public:
     void LoadTables(void);//加载表
     //CRecordEntity* InsertRecord(CRecordEntity &record); //插入记录
     void LoadRecord(void);//查询所有记录
-    bool matchQSLType(QString text);//匹配sql语句类型
+    bool matchSQLType(QString text);//匹配sql语句类型
 
 private:
     QString DBName;//当前数据库名

@@ -19,6 +19,7 @@ SOURCES += \
     UI/loginui.cpp \
     UI/mainwindow.cpp \
     Util/cfilehelper.cpp \
+    Util/sqlparser.cpp \
     Util/syntaxtree.cpp \
     main.cpp
 
@@ -34,6 +35,7 @@ HEADERS += \
     UI/mainwindow.h \
     Util/DataStructure.h \
     Util/cfilehelper.h \
+    Util/sqlparser.h \
     Util/syntaxtree.h
 
 FORMS += \

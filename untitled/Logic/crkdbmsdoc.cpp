@@ -44,29 +44,34 @@ bool CRKDBMSDoc::newDocument(string strName){
 }
 
 //匹配sql语句类型
-bool CRKDBMSDoc::matchQSLType(QString text){
+bool CRKDBMSDoc::matchSQLType(QString text){
      string temp=text.toLower().toStdString();
 
      if(regex_search (temp, regex("create\\s+table"))){
           //新建表
-//         CTableEntity te;
-//         STree_->creatCTableEntity(text,te);
-//         CTL_->CreateTable(DBName,te);
-         qDebug()<<" create table ok";
+         CTableEntity te;
+         STree_->creatCTableEntity(text,te);
+         CTL_->CreateTable(DBName,te);
+         //qDebug()<<" create table ok";
      }else if(regex_search (temp, regex("drop\\s+table"))){
           //删除表
-         qDebug()<<" drop table ok";
-     }else if(regex_search (temp, regex("alter[ ]*table"))){
+         //qDebug()<<" drop table ok";
+     }else if(regex_search (temp, regex("alter\\s+table"))){
          //更改表
-         qDebug()<<" alter table ok";
-     }else if(regex_search (temp, regex("select[ ]*"))){
+         if(regex_search(temp,regex("add\\s+"))){
+             //增加字段
+         }else if(regex_search(temp,regex("drop\\s+column"))){
+             //删除字段
+         }
+         //qDebug()<<" alter table ok";
+     }else if(regex_search (temp, regex("select\\s+"))){
          //查询表
-         qDebug()<<" select table ok";
-     }else if(regex_search (temp, regex("create[ ]*database"))){
+         //qDebug()<<" select table ok";
+     }else if(regex_search (temp, regex("create\\s+database"))){
          //新建数据库
-         qDebug()<<" create database ok";
-     }else if(regex_search (temp, regex("drop[ ]*database"))){
+         //qDebug()<<" create database ok";
+     }else if(regex_search (temp, regex("drop\\s+database"))){
          //删除数据库
-         qDebug()<<" drop database ok";
+         //qDebug()<<" drop database ok";
      }
 }

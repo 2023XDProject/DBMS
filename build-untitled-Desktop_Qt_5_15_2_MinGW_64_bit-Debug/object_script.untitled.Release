@@ -1,0 +1,15 @@
+release/cdbdao.o
+release/ctabledao.o
+release/cdblogic.o
+release/cfilelogic.o
+release/crkdbmsdoc.o
+release/ctablelogic.o
+release/connectionui.o
+release/loginui.o
+release/mainwindow.o
+release/cfilehelper.o
+release/syntaxtree.o
+release/main.o
+release/moc_connectionui.o
+release/moc_loginui.o
+release/moc_mainwindow.o

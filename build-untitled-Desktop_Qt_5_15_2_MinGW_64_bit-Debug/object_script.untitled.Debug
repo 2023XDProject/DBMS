@@ -1,0 +1,15 @@
+debug/cdbdao.o
+debug/ctabledao.o
+debug/cdblogic.o
+debug/cfilelogic.o
+debug/crkdbmsdoc.o
+debug/ctablelogic.o
+debug/connectionui.o
+debug/loginui.o
+debug/mainwindow.o
+debug/cfilehelper.o
+debug/syntaxtree.o
+debug/main.o
+debug/moc_connectionui.o
+debug/moc_loginui.o
+debug/moc_mainwindow.o

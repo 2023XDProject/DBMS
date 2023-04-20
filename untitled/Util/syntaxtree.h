@@ -1,5 +1,5 @@
 /*
- * 语法树
+ *
  */
 #ifndef SYNTAXTREE_H
 #define SYNTAXTREE_H

@@ -34,6 +34,7 @@ bool CRKDBMSDoc::newDocument(string strName){
     string temp=CDBL_->getDBFolder(strName);
     CDBEntity defCDBE=CDBEntity(true,strName,temp,time);
     bool finished=CDBL_->CreateDatabase(defCDBE);
+
     if(finished==true){
         DBName=QString::fromStdString(strName);
         return true;
@@ -46,13 +47,13 @@ bool CRKDBMSDoc::newDocument(string strName){
 bool CRKDBMSDoc::matchQSLType(QString text){
      string temp=text.toLower().toStdString();
 
-     if(regex_search (temp, regex("create[ ]*table"))){
+     if(regex_search (temp, regex("create\\s+table"))){
           //新建表
-         CTableEntity te;
-         STree_->creatCTableEntity(text,te);
-         CTL_->CreateTable(DBName,te);
+//         CTableEntity te;
+//         STree_->creatCTableEntity(text,te);
+//         CTL_->CreateTable(DBName,te);
          qDebug()<<" create table ok";
-     }else if(regex_search (temp, regex("drop[ ]*table"))){
+     }else if(regex_search (temp, regex("drop\\s+table"))){
           //删除表
          qDebug()<<" drop table ok";
      }else if(regex_search (temp, regex("alter[ ]*table"))){

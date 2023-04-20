@@ -19,7 +19,7 @@ bool CDBDao::CreateDB(const QString strFilepath,CDBEntity db,bool bAppend){
             return false;
         }
     }else{
-        if(file.open(QIODevice::Truncate | QIODevice::ReadOnly)){
+        if(file.open(QIODevice::Truncate | QIODevice::WriteOnly)){
             QTextStream out(&file);
             //type,name,filepath,crtime
             out<<db.getBaseType()<<QString::fromStdString(db.getBaseName())

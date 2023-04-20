@@ -3,11 +3,13 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),CRKDBMSD_(new CRKDBMSDoc())
-    , ui(new Ui::MainWindow)
+    , ui(new Ui::MainWindow),cUI_(new connectionUI())
 {
     ui->setupUi(this);
     updateTableInfo();
     CRKDBMSD_->OnNewDocument();
+    //绑定接受新数据库名称界面和此界面
+    connect(cUI_, SIGNAL(setDBName(QString )), this, SLOT(receiveDBName(QString )),Qt::QueuedConnection);
 }
 
 MainWindow::~MainWindow()
@@ -141,7 +143,14 @@ void MainWindow::updateItemInfo(){
 
 //新建数据库
 bool MainWindow::createDB(){
-    CRKDBMSD_->OnNewDocument();
+    cUI_->show();
+}
+
+//接受新建数据库
+void MainWindow::receiveDBName(QString Name){
+    DBName_=Name;
+    qDebug()<<DBName_;
+    //bool temp=CRKDBMSD_->newDocument(DBName_.toStdString());
 }
 
 //新建查询
@@ -173,3 +182,4 @@ bool MainWindow::run(){
 
     //if()
 }
+

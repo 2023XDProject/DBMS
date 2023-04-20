@@ -36,6 +36,7 @@ signals:
     //void clicked(bool);
 
 private slots:
+    void receiveDBName(QString );
     bool createDB();//新建数据库
     bool createEnquiry();//新建查询
     bool createUser();//新建用户
@@ -43,6 +44,7 @@ private slots:
     bool run();//运行查询
 private:
     Ui::MainWindow *ui;
+    connectionUI *cUI_;
     //菜单栏组件
     QMenuBar *bar;
     QMenu * fileMenu,* helpMenu;
@@ -55,5 +57,6 @@ private:
     QToolBar * toolbar;
     QToolButton * btn1,* btn2,* btn3,* btn4,* btn5;
     CRKDBMSDoc *CRKDBMSD_;
+    QString DBName_;
 };
 #endif // MAINWINDOW_H

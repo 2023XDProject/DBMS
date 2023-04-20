@@ -4,8 +4,8 @@
 CFileLogic::CFileLogic(){
     DBPath_=QDir::currentPath().replace(QString("/"),QString("\\")).toStdString();
     //qDebug()<<QString::fromStdString(DBPath_);
-    nowDBFile_=DBPath_+"\\ruanko.tb";
-    DBFile_=DBPath_+"\\ALLDB.tb";
+    nowDBFile_=DBPath_+"\\ruanko.txt";
+    DBFile_=DBPath_+"\\ALLDB.txt";
 }
 
 //获取当前数据库描述文件路径

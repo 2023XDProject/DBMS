@@ -20,6 +20,7 @@ public:
     bool GetDatabase(CDBEntity &db);//查询数据库
     string getDefaDBFile();//获取数据库描述文件绝对路径
     string getDBFolder(const string strDBName);//获取数据库文件夹路径
+    bool createDataDBFolder();//创建data文件夹
  private:
    CFileLogic *CFL_;
    CDBDao *CDBD_;

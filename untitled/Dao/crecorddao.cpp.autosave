@@ -1,0 +1,51 @@
+/*
+ * 记录信息数据操作类，读取记录文件(.trd)，获取文件中的记录信息。
+ * 数据库文件夹../data/Ruanko
+ * 表描述文件Ruanko.tb
+ * 日志文件Ruanko.log
+ * 表定义文件Account.tdf
+ * 记录文件Account.trd
+ * 完整性描述文件Account.tic
+ * 索引描述文件Account.tid
+ */
+#include "crecorddao.h"
+
+CRecordDao::CRecordDao(){
+    
+}
+
+//插入记录?
+bool CRecordDao::Insert(CTableEntity &te, CRecordEntity &re){
+    
+}
+
+//将记录数据保存到记录文件中
+bool CRecordDao::Write(QString strFilePath, CTableEntity &te, CRecordEntity &re){
+    QFile file(strFilePath);
+    if(file.open(QIODevice::WriteOnly| QIODevice::Append)){
+        QDataStream out(&file);
+        
+        out<<QString::fromStdString(re.getRecord());
+        
+        file.close();
+        return true;
+    }else{
+        return false;
+    }
+}
+
+//从记录文件中，读取所有记录
+bool CRecordDao::Read(QString strFilePath, CTableEntity &te, CRecordEntity &re){
+    QFile file(strFilePath);
+    if(file.open(QIODevice::ReadOnly)){
+        QDataStream in(&file);
+        string temp;
+        
+        //in>>temp;
+        
+        file.close();
+        return true;
+    }else{
+        return false;
+    }
+}

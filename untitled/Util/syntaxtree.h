@@ -5,7 +5,10 @@
 #define SYNTAXTREE_H
 #include <Regex>
 #include <QString>
+#include <QDebug>
+#include <stdlib.h>
 #include "DataStructure.h"
+#include "../Logic/cfilelogic.h"
 
 using namespace std;
 
@@ -13,11 +16,10 @@ class SyntaxTree
 {
 public:
     SyntaxTree();
-    bool creatCDBEntity(QString text,CDBEntity &te);//根据sql语句构造CDBEntity
-    bool creatCTableEntity(QString text,CTableEntity &ct);//根据sql语句构造CTableEntity
-
-
-
+    ~SyntaxTree();
+    bool creatCDBEntity(string text,CDBEntity &te);//根据sql语句构造CDBEntity
+    bool creatCTableEntity(string text,string dbName,CTableEntity &ct,vector<CFieldEntity> &cfe);//根据sql语句构造CTableEntity
+    CFileLogic *CFL_;
 };
 
 #endif // SYNTAXTREE_H

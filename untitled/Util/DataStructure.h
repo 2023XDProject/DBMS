@@ -33,11 +33,14 @@ struct TableBlock
 //字段信息块
 struct FieldBlock
 {
+ int order;//字段顺序
  string name; // 名称
- int type; // 类型
- int param; // 参数
+ int type; // 类型(1:integer,2:bool,3:float,4:varchar2,5:date)
+ int param; // 参数(VARCHAR几位)
  QDateTime mtime; // 最后修改时间
- int integrities; // 完整性约束信息
+ int integrityType; // 完整性约束信息类型
+ int integrityNum;//整性约束信息条数
+ vector<string> integrities; // 完整性约束信息(比如 primary key,not null,default 默认值(需要正则表达式自己依据字段类型匹配出来),unique)
 };
 
 /*
@@ -61,7 +64,7 @@ public:
     void setBaseName(string n){DB_.name=n;};
     void setBaseType(bool t){DB_.type=t;};
     void setBaseFilepath(string f){DB_.filepath=f;}
-    void getBaseCrtime(QDateTime b){DB_.crtime=b;}
+    void setBaseCrtime(QDateTime b){DB_.crtime=b;}
 
 private:
    DatabaseBlock DB_;
@@ -105,26 +108,37 @@ private:
 /*
  * 存放字段信息，查询，修改（没有容错）字段信息
  */
-class CFiledEntity{
-    CFiledEntity(){};
-    CFiledEntity(string name,int type,int param,QDateTime mtime,int integrities){
+class CFieldEntity{
+public:
+    CFieldEntity(){
+        FB_.integrityType=0;
+        FB_.integrityNum=0;
+    };
+    CFieldEntity(int order,string name,int type,int param,QDateTime mtime,int integrityNum,string integrity){
+        FB_.order=order;//顺序
         FB_.name=name; // 名称
         FB_.type=type; // 类型
         FB_.param=param; // 参数
         FB_.mtime=mtime; // 最后修改时间
-        FB_.integrities=integrities; // 完整性约束信息
+        FB_.integrityNum=integrityNum; // 完整性约束信息条数
     }
+    int getOrder(){return FB_.order;}
     string getName(){return FB_.name;}
     int getType(){return FB_.type; }
     int getParam(){return FB_.param;}
     QDateTime getMtime(){return FB_.mtime;}
-    int getIntegrities(){return FB_.integrities;}
+    int getIntegrityType(){return FB_.integrityType;}
+    int getIntegrityNum(){return FB_.integrityNum;}
+    string getIntegrity(int i){return FB_.integrities[i];}
 
+    void setOrder(int i){FB_.order=i;}
     void setName(string n){FB_.name=n;}
-    void getType(int t){FB_.type=t;}
-    void getParam(int p){FB_.param=p;}
-    void getMtime(QDateTime m){FB_.mtime=m;}
-    void getIntegrities(int i){FB_.integrities=i;}
+    void setType(int t){FB_.type=t;}
+    void setParam(int p){FB_.param=p;}
+    void setMtime(QDateTime m){FB_.mtime=m;}
+    void setIntegrityType(int i){FB_.integrityType=i;}
+    void setIntegrityNum(int i){FB_.integrityNum=i;}
+    void setIntegrity(string i){FB_.integrities.push_back(i);}
 
 private:
      FieldBlock FB_;

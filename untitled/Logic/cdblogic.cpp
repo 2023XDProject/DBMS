@@ -35,7 +35,7 @@ bool CDBLogic::CreateDatabase(CDBEntity &db){
 
     bool temp =CFH_->IsValidDirector(tempQPath);
 
-    qDebug()<<temp<<" "<<tempQPath;
+    //qDebug()<<temp<<" "<<tempQPath;
     //数据库已存在
     if(temp==true){
         return false;
@@ -63,9 +63,21 @@ bool CDBLogic::CreateDatabase(CDBEntity &db){
         }
     }
 }
-//查询数据库
-bool CDBLogic::GetDatabase(CDBEntity &db){
 
+//创建data文件夹
+bool CDBLogic::createDataDBFolder(){
+    QString data=QString::fromStdString(CFL_->GetAbsolutePath("./data"));
+    CFH_->CreateDirector(data);
+}
+
+//查询数据库
+bool CDBLogic::GetDatabase(CDBEntity &db){      
+       //CDBD_->GetDatabase(CFL_->GetQStringPath(CFL_->GetDBFile()),db);
+       if(db.getBaseName()!=""){
+           return true;
+       }else{
+           return false;
+       }
 }
 
 //获取数据库描述文件绝对路径

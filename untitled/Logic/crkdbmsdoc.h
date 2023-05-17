@@ -7,6 +7,7 @@
 #include "cdblogic.h"
 #include "../Util/syntaxtree.h"
 #include "ctablelogic.h"
+#include <vector>
 
 using namespace std;
 
@@ -15,9 +16,11 @@ class CRKDBMSDoc{
 public:
     CRKDBMSDoc();
     ~CRKDBMSDoc();
-    bool OnNewDocument();//新建文档，创建默认数据库。
-    CDBEntity GetDBEntity();//获取数据库
-    bool newDocument(string strName);//新建数据库
+    bool OnNewDocument();//新建文档，创建默认数据库(完成)
+    CDBEntity GetDBEntity(string DBName);//获取数据库
+    CDBEntity GetDBEntity();
+    bool loadDataBase();//加载数据库
+    bool newDocument(string strName);//新建数据库(完成)
     CTableEntity* CreateTable(string strName);//创建表
     //CFieldEntity* AddField(CFieldEntity &field);//添加字段
     void LoadTables(void);//加载表
@@ -30,6 +33,7 @@ private:
     CDBLogic *CDBL_;
     CTableLogic *CTL_;
     SyntaxTree *STree_;
+    vector<CDBEntity>  allDB_;//所有数据库信息
 };
 
 #endif // CRKDBMSDOC_H

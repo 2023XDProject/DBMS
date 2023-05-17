@@ -10,9 +10,11 @@ CONFIG += c++17
 
 SOURCES += \
     Dao/cdbdao.cpp \
+    Dao/crecorddao.cpp \
     Dao/ctabledao.cpp \
     Logic/cdblogic.cpp \
     Logic/cfilelogic.cpp \
+    Logic/crecordlogic.cpp \
     Logic/crkdbmsdoc.cpp \
     Logic/ctablelogic.cpp \
     UI/connectionui.cpp \
@@ -24,9 +26,11 @@ SOURCES += \
 
 HEADERS += \
     Dao/cdbdao.h \
+    Dao/crecorddao.h \
     Dao/ctabledao.h \
     Logic/cdblogic.h \
     Logic/cfilelogic.h \
+    Logic/crecordlogic.h \
     Logic/crkdbmsdoc.h \
     Logic/ctablelogic.h \
     UI/connectionui.h \

@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     updateTableInfo();
+    //创建默认数据库
     CRKDBMSD_->OnNewDocument();
     //绑定接受新数据库名称界面和此界面
     connect(cUI_, SIGNAL(setDBName(QString )), this, SLOT(receiveDBName(QString )),Qt::QueuedConnection);
@@ -62,7 +63,7 @@ void MainWindow::updateToolBar(){
     toolbar->setMovable(false);
 
     //新建数据库
-    QIcon CreateDBIcon=QIcon("./Icon/createDB_icon.jpg");
+    QIcon CreateDBIcon=QIcon("../untitled/Icon/createDB_icon.jpg");
     btn1= new QToolButton(toolbar);
     btn1->setIconSize(QSize(20,20));//为什么没用呢
     btn1->setIcon(CreateDBIcon);
@@ -74,7 +75,7 @@ void MainWindow::updateToolBar(){
     connect(btn1, SIGNAL(clicked(bool)), this, SLOT(createDB()));
 
     //新建查询
-    QIcon enquiryIcon=QIcon("./Icon/enquiry_icon.jpg");
+    QIcon enquiryIcon=QIcon("../untitled/Icon/enquiry_icon.jpg");
     btn2= new QToolButton(toolbar);
     btn2->setIconSize(QSize(20,20));
     btn2->setIcon(enquiryIcon);
@@ -86,7 +87,7 @@ void MainWindow::updateToolBar(){
     connect(btn2, SIGNAL(clicked(bool)), this, SLOT(createEnquiry()));
 
     //新建用户
-    QIcon createUserIcon=QIcon("./Icon/createUser_icon.jpg");
+    QIcon createUserIcon=QIcon("../untitled/Icon/createUser_icon.jpg");
     btn3= new QToolButton(toolbar);
     btn3->setIconSize(QSize(20,20));
     btn3->setIcon(createUserIcon);
@@ -98,7 +99,7 @@ void MainWindow::updateToolBar(){
     connect(btn3, SIGNAL(clicked(bool)), this, SLOT(createUser()));
 
     //登录
-    QIcon loginIcon=QIcon("./Icon/login_icon.jpg");
+    QIcon loginIcon=QIcon("../untitled/Icon/login_icon.jpg");
     btn4= new QToolButton(toolbar);
     btn4->setIconSize(QSize(20,20));
     btn4->setIcon(loginIcon);
@@ -110,7 +111,7 @@ void MainWindow::updateToolBar(){
     connect(btn4, SIGNAL(clicked(bool)), this, SLOT(login()));
 
     //运行
-    QIcon runIcon=QIcon("./Icon/run_icon.jpg");
+    QIcon runIcon=QIcon("../untitled/Icon/run_icon.jpg");
     btn5= new QToolButton(toolbar);
     btn5->setIconSize(QSize(20,20));
     btn5->setIcon(runIcon);
@@ -149,8 +150,8 @@ bool MainWindow::createDB(){
 //接受新建数据库
 void MainWindow::receiveDBName(QString Name){
     DBName_=Name;
-    qDebug()<<DBName_;
-    //bool temp=CRKDBMSD_->newDocument(DBName_.toStdString());
+    //qDebug()<<DBName_;
+    bool temp=CRKDBMSD_->newDocument(DBName_.toStdString());
 }
 
 //新建查询

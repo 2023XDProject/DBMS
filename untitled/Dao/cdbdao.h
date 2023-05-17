@@ -6,6 +6,7 @@
 #include "../Util/DataStructure.h"
 #include <QString>
 #include <QFile>
+#include <QDataStream>
 #include <QTextStream>
 #include <QDateTime>
 #include <vector>
@@ -17,7 +18,7 @@ class CDBDao{
 public:
     CDBDao();
     bool CreateDB(const QString strFilepath,CDBEntity db,bool bAppend = true);//将数据库信息保存到文件中
-    bool GetDatabase(const QString strFilepath, CDBEntity &db);//从文件中获取数据库信息
+    bool GetDatabase(const QString strFilepath, vector<int> &dbs);//从文件中获取数据库信息
 private:
     vector<CDBEntity> CDBEntitys_;
 

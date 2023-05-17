@@ -1,0 +1,24 @@
+/*
+ * 记录信息业务逻辑类，调用 CRecordDao 方法，获取记录信息。
+ */
+#ifndef CRECORDLOGIC_H
+#define CRECORDLOGIC_H
+#include <QString>
+#include "../Util/DataStructure.h"
+#include "../Dao/crecorddao.h"
+#include "../Dao/ctabledao.h"
+#include "cfilelogic.h"
+#include "ctablelogic.h"
+
+class CRecordLogic
+{
+public:
+    CRecordLogic();
+    bool Insert(const QString strDBName, CTableEntity &te, CRecordEntity &re);//插入记录
+    //bool SelectAll(CTableEntity &te, RECORDARR &data);//查询所有记录
+private:
+    CRecordDao *CRD_;
+    CTableDao *CTD_;
+    CFileLogic *CFL_;
+};
+#endif // CRECORDLOGIC_H

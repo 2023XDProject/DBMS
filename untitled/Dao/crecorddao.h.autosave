@@ -1,0 +1,25 @@
+/*
+ * 记录信息数据操作类，读取记录文件(.trd)，获取文件中的记录信息。
+ */
+#ifndef CRECORDDAO_H
+#define CRECORDDAO_H
+#include "../Util/DataStructure.h"
+#include <QString>
+#include <cstring>
+#include <QFile>
+#include <QDataStream>
+#include <QTextStream>
+#include <QDateTime>
+#include <vector>
+
+class CRecordDao
+{
+public:
+    CRecordDao();
+    bool Insert(CTableEntity &te, CRecordEntity &re);//插入记录
+    //int SelectAll(CTableEntity &te, RECORDARR &data);//查询所有记录
+    bool Write(QString strFilePath, CTableEntity &te, CRecordEntity &re);//将记录数据保存到记录文件中
+    bool Read(QString strFilePath, CTableEntity &te, CRecordEntity &re);//从记录文件中，读取所有记录
+};
+
+#endif // CRECORDDAO_H

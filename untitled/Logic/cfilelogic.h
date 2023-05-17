@@ -19,6 +19,7 @@ public:
     string GetTableFile(const string strDBName);//获取数据库表描述文件路径
     string GetTbDefineFile(const string strDBName,const string strTableName);//获取表定义文件路径
     string GetTbRecordFile(const string strDBName,const string strTableName);//获取记录文件路径
+    string GetTbConstraitFile(const string strDBName,const string strTableName);//获取表约束文件路径(.tic)
     string GetAbsolutePath(const string strRelativePath);//将相对路径改成绝对路径
     QString GetQStringPath(string strRelativePath);//将string类型的文件路径转化为QString类型的
 private:

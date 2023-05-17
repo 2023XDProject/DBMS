@@ -1,0 +1,13 @@
+#include "crecordlogic.h"
+
+CRecordLogic::CRecordLogic():CRD_(new CRecordDao()),
+    CTD_(new CTableDao()){
+
+}
+
+bool CRecordLogic::Insert(const QString strDBName, CTableEntity &te, CRecordEntity &re){
+    QString temp=CFL_->GetQStringPath(CFL_->GetTableFile(strDBName.toStdString()));
+    //创建（.tdf）文件，写入字段信息
+    CRD_->Insert(te,re);//将记录信息传递给CRecordDao
+    CTD_->Create(temp,te);//更新表描述信息
+}

@@ -257,6 +257,7 @@ release/moc_connectionui.cpp: ../untitled/UI/connectionui.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qvector2d.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QString \
 		release/moc_predefs.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/bin/moc.exe
 	D:\Qt\5.12\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include D:/practicalTraining/DBMS/build-untitled-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/release/moc_predefs.h -ID:/Qt/5.12/5.15.2/mingw81_64/mkspecs/win32-g++ -ID:/practicalTraining/DBMS/untitled -ID:/Qt/5.12/5.15.2/mingw81_64/include -ID:/Qt/5.12/5.15.2/mingw81_64/include/QtWidgets -ID:/Qt/5.12/5.15.2/mingw81_64/include/QtGui -ID:/Qt/5.12/5.15.2/mingw81_64/include/QtANGLE -ID:/Qt/5.12/5.15.2/mingw81_64/include/QtCore -I. -ID:/Qt/5.12/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Qt/5.12/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/5.12/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/5.12/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Qt/5.12/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Qt/5.12/Tools/mingw810_64/x86_64-w64-mingw32/include ..\untitled\UI\connectionui.h -o release\moc_connectionui.cpp
@@ -474,6 +475,7 @@ release/moc_mainwindow.cpp: ../untitled/UI/mainwindow.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qvector2d.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QString \
 		../untitled/Logic/CRKDBMSDoc.h \
 		../untitled/Logic/cdblogic.h \
 		../untitled/Logic/cfilelogic.h \
@@ -485,8 +487,8 @@ release/moc_mainwindow.cpp: ../untitled/UI/mainwindow.h \
 		../untitled/Util/DataStructure.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDateTime \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
-		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QString \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QFile \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDataStream \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QTextStream \
 		../untitled/Util/cfilehelper.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDir \
@@ -495,6 +497,8 @@ release/moc_mainwindow.cpp: ../untitled/UI/mainwindow.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QFileInfo \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qDebug \
 		../untitled/Util/syntaxtree.h \
+		../untitled/Logic/ctablelogic.h \
+		../untitled/Dao/ctabledao.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/QMainWindow \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/qmainwindow.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/qtabwidget.h \
@@ -641,6 +645,8 @@ release/cdbdao.o: ../untitled/Dao/cdbdao.cpp ../untitled/Dao/cdbdao.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qobject_impl.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDataStream \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QTextStream \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qtextstream.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qlocale.h \
@@ -702,7 +708,32 @@ release/ctabledao.o: ../untitled/Dao/ctabledao.cpp ../untitled/Dao/ctabledao.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qstringlist.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qregexp.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qstringmatcher.h \
-		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QString
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QString \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QFile \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qfile.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qobject.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qobjectdefs.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qcoreevent.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qmetatype.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qobject_impl.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDataStream \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QTextStream \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qtextstream.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qlocale.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qvariant.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qmap.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qset.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\ctabledao.o ..\untitled\Dao\ctabledao.cpp
 
 release/cdblogic.o: ../untitled/Logic/cdblogic.cpp ../untitled/Logic/cdblogic.h \
@@ -783,6 +814,8 @@ release/cdblogic.o: ../untitled/Logic/cdblogic.cpp ../untitled/Logic/cdblogic.h 
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QFile \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qfile.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDataStream \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QTextStream \
 		../untitled/Util/cfilehelper.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDir \
@@ -946,6 +979,8 @@ release/crkdbmsdoc.o: ../untitled/Logic/crkdbmsdoc.cpp ../untitled/Logic/crkdbms
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QFile \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qfile.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDataStream \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QTextStream \
 		../untitled/Util/cfilehelper.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDir \
@@ -953,10 +988,13 @@ release/crkdbmsdoc.o: ../untitled/Logic/crkdbmsdoc.cpp ../untitled/Logic/crkdbms
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qfileinfo.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QFileInfo \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qDebug \
-		../untitled/Util/syntaxtree.h
+		../untitled/Util/syntaxtree.h \
+		../untitled/Logic/ctablelogic.h \
+		../untitled/Dao/ctabledao.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\crkdbmsdoc.o ..\untitled\Logic\crkdbmsdoc.cpp
 
 release/ctablelogic.o: ../untitled/Logic/ctablelogic.cpp ../untitled/Logic/ctablelogic.h \
+		../untitled/Dao/ctabledao.h \
 		../untitled/Util/DataStructure.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDateTime \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
@@ -1005,7 +1043,42 @@ release/ctablelogic.o: ../untitled/Logic/ctablelogic.cpp ../untitled/Logic/ctabl
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qstringlist.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qregexp.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qstringmatcher.h \
-		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QString
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QString \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QFile \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qfile.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qobject.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qobjectdefs.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qcoreevent.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qmetatype.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qobject_impl.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDataStream \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QTextStream \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qtextstream.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qlocale.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qvariant.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qmap.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qset.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
+		../untitled/Util/cfilehelper.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDir \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qdir.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qfileinfo.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QFileInfo \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDebug \
+		../untitled/Logic/cfilelogic.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QCoreApplication \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qeventloop.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\ctablelogic.o ..\untitled\Logic\ctablelogic.cpp
 
 release/connectionui.o: ../untitled/UI/connectionui.cpp ../untitled/UI/connectionui.h \
@@ -1112,6 +1185,7 @@ release/connectionui.o: ../untitled/UI/connectionui.cpp ../untitled/UI/connectio
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qvector2d.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QString \
 		ui_connectionui.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QVariant \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/QApplication \
@@ -1120,7 +1194,22 @@ release/connectionui.o: ../untitled/UI/connectionui.cpp ../untitled/UI/connectio
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qeventloop.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/qdesktopwidget.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
-		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qinputmethod.h
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/QLabel \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/qframe.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/QPushButton \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/qabstractbutton.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qicon.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/QTextEdit \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/qtextedit.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qtextdocument.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qtextoption.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qtextcursor.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qtextformat.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qpen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\connectionui.o ..\untitled\UI\connectionui.cpp
 
 release/loginui.o: ../untitled/UI/loginui.cpp ../untitled/UI/loginui.h \
@@ -1347,6 +1436,7 @@ release/mainwindow.o: ../untitled/UI/mainwindow.cpp ../untitled/UI/mainwindow.h 
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qvector2d.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QString \
 		../untitled/Logic/CRKDBMSDoc.h \
 		../untitled/Logic/cdblogic.h \
 		../untitled/Logic/cfilelogic.h \
@@ -1358,8 +1448,8 @@ release/mainwindow.o: ../untitled/UI/mainwindow.cpp ../untitled/UI/mainwindow.h 
 		../untitled/Util/DataStructure.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDateTime \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
-		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QString \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QFile \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDataStream \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QTextStream \
 		../untitled/Util/cfilehelper.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDir \
@@ -1368,6 +1458,8 @@ release/mainwindow.o: ../untitled/UI/mainwindow.cpp ../untitled/UI/mainwindow.h 
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QFileInfo \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qDebug \
 		../untitled/Util/syntaxtree.h \
+		../untitled/Logic/ctablelogic.h \
+		../untitled/Dao/ctabledao.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/QMainWindow \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/qmainwindow.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/qtabwidget.h \
@@ -1503,7 +1595,80 @@ release/cfilehelper.o: ../untitled/Util/cfilehelper.cpp ../untitled/Util/cfilehe
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\cfilehelper.o ..\untitled\Util\cfilehelper.cpp
 
-release/syntaxtree.o: ../untitled/Util/syntaxtree.cpp ../untitled/Util/syntaxtree.h
+release/syntaxtree.o: ../untitled/Util/syntaxtree.cpp ../untitled/Util/syntaxtree.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QString \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qstring.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qchar.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qglobal.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qconfig-bootstrapped.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qconfig.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qtcore-config.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qsystemdetection.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qprocessordetection.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qcompilerdetection.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qtypeinfo.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qsysinfo.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qlogging.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qflags.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qatomic.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qbasicatomic.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qatomic_bootstrap.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qatomic_msvc.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qglobalstatic.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qmutex.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qnumeric.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qversiontagging.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qnamespace.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qarraydata.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qstringliteral.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qstringalgorithms.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qstringview.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qstringbuilder.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDebug \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qhash.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qiterator.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qlist.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qhashfunctions.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qpair.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qvector.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qpoint.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qbytearraylist.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qstringlist.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qregexp.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qstringmatcher.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qmap.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qtextstream.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qobject.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qobjectdefs.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qcoreevent.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qmetatype.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qobject_impl.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qlocale.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qvariant.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qshareddata.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qset.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
+		../untitled/Util/DataStructure.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDateTime \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
+		../untitled/Logic/cfilelogic.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QCoreApplication \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qeventloop.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\syntaxtree.o ..\untitled\Util\syntaxtree.cpp
 
 release/main.o: ../untitled/main.cpp ../untitled/UI/mainwindow.h \
@@ -1611,6 +1776,7 @@ release/main.o: ../untitled/main.cpp ../untitled/UI/mainwindow.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qvector2d.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QString \
 		../untitled/Logic/CRKDBMSDoc.h \
 		../untitled/Logic/cdblogic.h \
 		../untitled/Logic/cfilelogic.h \
@@ -1622,8 +1788,8 @@ release/main.o: ../untitled/main.cpp ../untitled/UI/mainwindow.h \
 		../untitled/Util/DataStructure.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDateTime \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
-		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QString \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QFile \
+		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDataStream \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QTextStream \
 		../untitled/Util/cfilehelper.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QDir \
@@ -1632,6 +1798,8 @@ release/main.o: ../untitled/main.cpp ../untitled/UI/mainwindow.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/QFileInfo \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtCore/qDebug \
 		../untitled/Util/syntaxtree.h \
+		../untitled/Logic/ctablelogic.h \
+		../untitled/Dao/ctabledao.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/QMainWindow \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/qmainwindow.h \
 		../../../Qt/5.12/5.15.2/mingw81_64/include/QtWidgets/qtabwidget.h \

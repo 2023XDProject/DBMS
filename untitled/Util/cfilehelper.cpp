@@ -1,5 +1,8 @@
 #include "cfilehelper.h"
 
+CFileHelper::CFileHelper():CFL_(new CFileLogic() )
+{}
+
 //创建文件，且当文件路径中的文件夹不存在时会创建文件夹
 bool CFileHelper::CreateDBFile(QString strFileName){
      //qDebug()<<strFileName;
@@ -23,7 +26,7 @@ bool CFileHelper::CreateDirector(QString strDirectorName){
     }
 }
 
-//判断文件路径的有效性,看看这个文件存不存在
+//判断文件路径的有效性,看看这个文件存不存在,使用绝对路径
 bool CFileHelper::IsValidFile(const QString strPath){
     QFileInfo fileInfo(strPath);
         if(fileInfo.exists())
@@ -33,7 +36,7 @@ bool CFileHelper::IsValidFile(const QString strPath){
         return false;
 }
 
-//判断文件夹有效性，看看存不存在
+//判断文件夹有效性，看看存不存在,使用绝对路径
 bool CFileHelper::IsValidDirector(const QString strDirectorName){
     QDir dir(strDirectorName);
        if(dir.exists())

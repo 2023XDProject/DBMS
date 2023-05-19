@@ -21,9 +21,12 @@ public:
     bool addFieldConstrait(const QString strDBName,const string tableName,CFieldEntity &fe);//添加字段约束
     bool GetTables(const QString strDBName,vector<CTableEntity> &cte);//获取表信息
     bool writeTables(const QString strDBName,vector<CTableEntity> &cte);//覆写表信息
+    bool dropTable(const QString strDBName,const string tableName);//删除表
+
 private:
     CTableDao *CTD_;
     CFileLogic *CFL_;
+    CFileHelper *CFH_;
 };
 
 #endif // CTABLELOGIC_H

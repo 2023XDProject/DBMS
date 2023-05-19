@@ -28,7 +28,6 @@ private:
     string DBPath_;//“数据库路径//（不含数据库名）”
     string DBFolderPath_;//
     string TableFile_;
-
 };
 
 #endif // CFILELOGIC_H

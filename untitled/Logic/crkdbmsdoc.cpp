@@ -7,6 +7,8 @@ CRKDBMSDoc::CRKDBMSDoc():CDBL_(new CDBLogic()),
 
 CRKDBMSDoc::~CRKDBMSDoc(){
     delete CDBL_;
+    delete CTL_;
+    delete STree_;
 }
 
 //新建文档，创建默认数据库
@@ -86,8 +88,15 @@ bool CRKDBMSDoc::matchQSLType(QString text){
             CTL_->addFieldConstrait(DBName,te.getName(),fe[i]);
         }
         //qDebug()<<" create table ok";
-    }else if(regex_search (temp, regex("drop\\s+table"))){
+    }else if(regex_search (temp,result,regex("^drop\\s+table\\s+(\\w+);"))){
         //删除表
+        //匹配不出表名
+        if(result.empty()){
+            //发信号，sql语句错误。
+            return false;
+        }else{
+            CTL_->dropTable(DBName,result[1]);
+        }
         // qDebug()<<" drop table ok";
     }else if(regex_search (temp,result,regex("alter\\s+table\\s+(\\w+)"))){
         vector<CFieldEntity> cfe;
@@ -168,7 +177,6 @@ bool CRKDBMSDoc::matchQSLType(QString text){
             CTL_->alterField(DBName,tempTableName,cfe);
             vector<CFieldEntity> cfe2;
             CTL_->GetField(DBName,QString::fromStdString(tempTableName),cfe2);
-
             return true;
         }
         //更改表

@@ -3,7 +3,6 @@
 
 CFileLogic::CFileLogic(){
     DBPath_=QDir::currentPath().replace(QString("/"),QString("\\")).toStdString();
-
     //qDebug()<<QString::fromStdString(DBPath_);
     nowDBFile_=DBPath_+"\\ruanko.txt";
     DBFile_=DBPath_+"\\ALLDB.txt";
@@ -42,7 +41,7 @@ string CFileLogic::GetTbRecordFile(const string strDBName,const string strTableN
 
 //获取表约束文件路径(.tic)
 string CFileLogic::GetTbConstraitFile(const string strDBName,const string strTableName){
-     return DBPath_+"\\data\\"+strDBName+"\\"+strTableName+".txt";
+     return DBPath_+"\\data\\"+strDBName+"\\"+strTableName+".tic";
 }
 
 //将相对路径改成绝对路径

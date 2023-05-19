@@ -3,6 +3,7 @@
 #include "../Util/DataStructure.h"
 #include <QString>
 #include <QFile>
+#include <QDir>
 #include <QDataStream>
 #include <QTextStream>
 #include <QDateTime>
@@ -22,6 +23,7 @@ public:
     bool GetFieldConstrain(const QString strFilePath, CFieldEntity &fe);//获取字段约束信息
     bool GetFields(const QString strFilepath, vector<CFieldEntity> &fe);//获取文件中的字段信息。
     bool writeTable(const QString strFilePath, vector<CTableEntity> &te);//覆写表信息
-
+    bool dropTable(const QString strFilePath);//删除表
+    bool dropFloder(const QString strFilePath);//删除文件夹
 };
 #endif // CTABLEDAO_H

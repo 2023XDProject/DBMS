@@ -66,7 +66,7 @@ void MainWindow::updateToolBar(){
     QIcon CreateDBIcon=QIcon("../untitled/Icon/createDB_icon.jpg");
     btn1= new QToolButton(toolbar);
     btn1->setIconSize(QSize(20,20));//为什么没用呢
-    btn1->setIcon(CreateDBIcon);
+    //btn1->setIcon(CreateDBIcon);
     btn1->setFixedSize(70,70);
     btn1->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
     btn1->setText(QString::fromLocal8Bit("新建数据库" ));
@@ -78,7 +78,7 @@ void MainWindow::updateToolBar(){
     QIcon enquiryIcon=QIcon("../untitled/Icon/enquiry_icon.jpg");
     btn2= new QToolButton(toolbar);
     btn2->setIconSize(QSize(20,20));
-    btn2->setIcon(enquiryIcon);
+    //btn2->setIcon(enquiryIcon);
     btn2->setFixedSize(70,70);
     btn2->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
     btn2->setText(QString::fromLocal8Bit("新建查询" ));
@@ -90,7 +90,7 @@ void MainWindow::updateToolBar(){
     QIcon createUserIcon=QIcon("../untitled/Icon/createUser_icon.jpg");
     btn3= new QToolButton(toolbar);
     btn3->setIconSize(QSize(20,20));
-    btn3->setIcon(createUserIcon);
+    //btn3->setIcon(createUserIcon);
     btn3->setFixedSize(70,70);
     btn3->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
     btn3->setText(QString::fromLocal8Bit("新建用户" ));
@@ -102,7 +102,7 @@ void MainWindow::updateToolBar(){
     QIcon loginIcon=QIcon("../untitled/Icon/login_icon.jpg");
     btn4= new QToolButton(toolbar);
     btn4->setIconSize(QSize(20,20));
-    btn4->setIcon(loginIcon);
+    //btn4->setIcon(loginIcon);
     btn4->setFixedSize(70,70);
     btn4->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
     btn4->setText(QString::fromLocal8Bit("登录" ));
@@ -114,7 +114,7 @@ void MainWindow::updateToolBar(){
     QIcon runIcon=QIcon("../untitled/Icon/run_icon.jpg");
     btn5= new QToolButton(toolbar);
     btn5->setIconSize(QSize(20,20));
-    btn5->setIcon(runIcon);
+    //btn5->setIcon(runIcon);
     btn5->setFixedSize(70,70);
     btn5->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
     btn5->setText(QString::fromLocal8Bit("运行" ));
@@ -180,7 +180,5 @@ bool MainWindow::run(){
         temp=CRKDBMSD_->matchQSLType(tempText);
         return temp;
     }
-
     //if()
 }
-

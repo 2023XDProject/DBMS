@@ -22,7 +22,7 @@ public:
     bool GetTables(const QString strDBName,vector<CTableEntity> &cte);//获取表信息
     bool writeTables(const QString strDBName,vector<CTableEntity> &cte);//覆写表信息
     bool dropTable(const QString strDBName,const string tableName);//删除表
-
+    bool dropDB(const QString strDBName);//删除数据库
 private:
     CTableDao *CTD_;
     CFileLogic *CFL_;

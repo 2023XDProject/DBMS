@@ -181,15 +181,22 @@ bool CRKDBMSDoc::matchQSLType(QString text){
         }
         //更改表
         //qDebug()<<" alter table ok";
-    }else if(regex_search (temp, regex("select\\s+"))){
+    }else if(regex_search (temp, regex("^select\\s+"))){
         //查询表
         qDebug()<<" select table ok";
-    }else if(regex_search (temp, regex("create\\s+database"))){
+    }else if(regex_search (temp, regex("^create\\s+database"))){
         //新建数据库
 
         qDebug()<<" create database ok";
-    }else if(regex_search (temp, regex("drop\\s+database"))){
+    }else if(regex_search (temp,result,regex("^drop\\s+database\\s+(\\w+)"))){
         //删除数据库
+        //匹配不出表名
+        if(result.empty()){
+            //发信号，sql语句错误。
+            return false;
+        }else{
+            CTL_->dropDB(QString::fromStdString(result[1]));
+        }
         qDebug()<<" drop database ok";
     }
 }

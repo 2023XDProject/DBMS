@@ -111,3 +111,10 @@ bool CTableLogic::dropTable(const QString strDBName,const string tableName){
      * TODO:删除索引文件
      */
 }
+
+//删除数据库
+bool CTableLogic::dropDB(const QString strDBName){
+      string DBFilePath;
+      DBFilePath=CFL_->GetDBFolder(strDBName.toStdString());
+      CTD_->dropFloder(QString::fromStdString(DBFilePath));
+}
